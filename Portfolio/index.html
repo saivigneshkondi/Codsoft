@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/fee41f9e38.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="#Header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p> Front-end Developer</p>
+                <h1>Hi, I'm  <span>Sai Vignesh</span> Kondi</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I specially focus on the day to day work process to achieving the goals.My confidence make more focus on the work.I will do my work honestly.I will challenge my daily task well defined structured manner.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>Front-end</span><br>Developer Web/App interfaces</li>
+                            <li><span>Java</span><br>Developer in the App interfaces</li>
+                            <li><span>Problem-solving</span><br>using Data Structures using Java</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                    <ul>
+                        <li><span>2023</span><br>CodSoft intern role of  web Developer</li>
+                        <li><span>2022-23</span><br>Full Stack Web Development in PwSkills </li>
+                        <li><span>2023</span><br>Aicte-Eduskills Virtual internship in Domain of Android Developer</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Education">
+                <ul>
+                    <li><span>2021-25</span><br>Sreenidhi Institute of Science& Technology at Yamanpet</li>
+                    <li><span>2019-21</span><br>Narayana junior college</li>
+                    <li><span>2015-19</span><br>Kakatiya Techno school</li>
+                </ul>
+            </div>
+        </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>saivigneshkondi@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>9000414577</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/r-sampath-kumar-reddy-91b55a228/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/R-SAMPATH0303"><i class="fa-brands fa-square-github"></i></a>
+                        <a href="https://instagram.com/rsampath1103?igshid=MzMyNGUyNmU2YQ=="><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea type="Message" rows="6" placeholder="your Message"></textarea>
+                        <button type="Submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>CopyRight &copy; reserved <i class="fa-solid fa-heart"></i> in 2023 by Vignesh</p>
+        </div>
+    </div>
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu=document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+</body>
+</html>
